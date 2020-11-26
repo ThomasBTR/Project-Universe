@@ -1,6 +1,6 @@
 package com.espacex.decouverte.objetsastro;
 
-public abstract class Planete implements Comparable<Planete> {
+public abstract class Planete implements Comparable<Object> {
     public String nom;
     public long diametre;
     public Atmosphere atmosphere;
@@ -47,6 +47,6 @@ public abstract class Planete implements Comparable<Planete> {
     @Override
     public int compareTo(Object o) {
         Planete autrePlanete = (Planete) o;
-        return ((Float)distanceEtoile).compareTo(autrePlanete.distanceEtoile);
+        return Float.compare(distanceEtoile,autrePlanete.distanceEtoile);
     }
 }
