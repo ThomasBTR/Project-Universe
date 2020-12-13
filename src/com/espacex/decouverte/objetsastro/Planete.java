@@ -4,8 +4,8 @@ public abstract class Planete implements Comparable<Object> {
     public String nom;
     public long diametre;
     public Atmosphere atmosphere;
-    static String forme = "Sphérique";
-    static int nbPlanetesDecouvertes = 0 ;
+    public static final String forme = "Sphérique";
+    public static int nbPlanetesDecouvertes = 0 ;
     public float distanceEtoile ;
 
     Planete(){
@@ -18,20 +18,22 @@ public abstract class Planete implements Comparable<Object> {
     }
 
 
-    static String expansion (double distance2Planetes){
+    public static String expansion(double distance2Planetes){
+
         if (distance2Planetes<14){
             return "Oh la la mais c'est super rapide !";
         }
         else {
             return "Je rêve ou c'est plus rapide que la lumière ?";
+
         }
     }
 
 
-    void revolution(){
+    final void revolution(){
         System.out.println("Je suis la planète "+nom+" et je tourne autour de mon étoile.");
     }
-    void rotation(){
+    final void rotation(){
         System.out.println("Je suis la planète "+nom+"et je tourne sur moi-même.");
     }
 

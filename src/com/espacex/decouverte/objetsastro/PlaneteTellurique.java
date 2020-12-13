@@ -5,12 +5,14 @@ import com.espacex.decouverte.enginsspatiaux.VaisseauDeGuerre;
 
 public class PlaneteTellurique extends Planete implements Habitable{
 
-    int totalVisiteurs =0;
-    Vaisseau[][] vaisseauxAccostes = new Vaisseau[1][1];
+    public int totalVisiteurs =0;
+    public Vaisseau[][] vaisseauxAccostes = new Vaisseau[1][1];
+
 
     PlaneteTellurique(){
         super();
     }
+
     public PlaneteTellurique(String nom, int tailleBaie){
         super( nom);
         this.vaisseauxAccostes = new Vaisseau[2][tailleBaie];
@@ -62,33 +64,33 @@ public class PlaneteTellurique extends Planete implements Habitable{
     @Override
     public void accueillirVaisseaux(Vaisseau... vaisseaux) {
 
-        for ( int i = 0 ; i<vaisseaux.length ; i++ ) {
+        for (Vaisseau vaisseau : vaisseaux) {
 
 
-            int indexZone = 0 ;
+            int indexZone = 0;
 
-            switch (vaisseaux[i].type){
+            switch (vaisseau.type) {
                 case CARGO:
                 case VAISSEAUMONDE:
-                    indexZone = 1 ;
+                    indexZone = 1;
             }
 
 
-            if (vaisseaux[i] instanceof VaisseauDeGuerre) {
+            if (vaisseau instanceof VaisseauDeGuerre) {
 
-                ((VaisseauDeGuerre) vaisseaux[i]).desactiverArmes();
+                ((VaisseauDeGuerre) vaisseau).desactiverArmes();
             }
 
             for (int index = 0; index < vaisseauxAccostes[indexZone].length; index++) {
 
                 if (vaisseauxAccostes[indexZone][index] == null) {
 
-                    vaisseauxAccostes[indexZone][index] = vaisseaux[i];
+                    vaisseauxAccostes[indexZone][index] = vaisseau;
                     break;
                 }
             }
 
-            totalVisiteurs = totalVisiteurs + vaisseaux[i].nbPassagers;
+            totalVisiteurs = totalVisiteurs + vaisseau.nbPassagers;
         }
     }
 }

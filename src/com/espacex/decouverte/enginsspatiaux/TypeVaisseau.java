@@ -7,7 +7,8 @@ public enum TypeVaisseau {
     CARGO("Cargo"),
     VAISSEAUMONDE("Vaisseau-Monde");
 
-    public String nom;
+
+    public final String nom;
 
 
     TypeVaisseau(String nom) {

@@ -5,8 +5,8 @@ import java.util.TreeSet;
 
 public class Galaxie {
 
-    public String nom;
-    public Set<Planete> planetes = new TreeSet<>();
+  public String nom;
+  public final Set<Planete> planetes = new TreeSet<>();
 
 
 }

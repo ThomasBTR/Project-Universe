@@ -11,6 +11,6 @@ public class Atmosphere {
     public Float tauxArgon;
     public Float tauxDioxydeDeCarbone;
     public Float tauxSodium;
-    public Map<String,Float> constituants = new HashMap<>();
+    public final Map<String,Float> constituants = new HashMap<>();
 
 }

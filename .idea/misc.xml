@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="com.espacex.decouverte.objetsastro.Galaxie nom" />
+      <entry_point TYPE="field" FQNAME="com.espacex.decouverte.enginsspatiaux.VaisseauDeGuerre armesDesactivees" />
+      <entry_point TYPE="field" FQNAME="com.espacex.decouverte.enginsspatiaux.Vaisseau blindage" />
+      <entry_point TYPE="field" FQNAME="com.espacex.decouverte.objetsastro.Planete diametre" />
+      <entry_point TYPE="field" FQNAME="com.espacex.decouverte.enginsspatiaux.Vaisseau resistanceDuBouclier" />
+      <entry_point TYPE="field" FQNAME="com.espacex.decouverte.objetsastro.Atmosphere tauxArgon" />
+      <entry_point TYPE="field" FQNAME="com.espacex.decouverte.objetsastro.Atmosphere tauxDioxydeDeCarbone" />
+      <entry_point TYPE="field" FQNAME="com.espacex.decouverte.objetsastro.Atmosphere tauxSodium" />
+    </entry_points>
+    <pattern value="com.espacex.decouverte.objetsastro.Habitable" method="accueillirVaisseau" />
+    <pattern value="com.espacex.decouverte.objetsastro.Habitable" method="accueillirVaisseaux" />
+    <pattern value="com.espacex.decouverte.objetsastro.Habitable" />
+    <pattern value="com.espacex.decouverte.enginsspatiaux.Vaisseau" method="activerBouclier" />
+    <pattern value="com.espacex.decouverte.objetsastro.Atmosphere" />
+    <pattern value="com.espacex.decouverte.enginsspatiaux.Vaisseau" method="desactiverBouclier" />
+    <pattern value="com.espacex.decouverte.objetsastro.Galaxie" />
+    <pattern value="com.espacex.decouverte.HelloUniverse" />
+    <pattern value="com.espacex.decouverte.HelloUniverse" method="main" />
+    <pattern value="com.espacex.decouverte.objetsastro.Planete" />
+    <pattern value="com.espacex.decouverte.objetsastro.PlaneteTellurique" />
+    <pattern value="com.espacex.decouverte.objetsastro.PlaneteTellurique" method="PlaneteTellurique" />
+    <pattern value="com.espacex.decouverte.objetsastro.Planete" method="revolution" />
+    <pattern value="com.espacex.decouverte.objetsastro.Planete" method="rotation" />
+    <pattern value="com.espacex.decouverte.enginsspatiaux.Vaisseau" />
+    <pattern value="com.espacex.decouverte.enginsspatiaux.VaisseauDeGuerre" />
+  </component>
   <component name="ProjectKey">
     <option name="state" value="project://e2804f05-5315-4fc6-a121-c522a6c26470" />
   </component>
